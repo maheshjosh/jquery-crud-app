@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jQuery Project</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style>
+		.edit {
+		    border: 0px;
+		    border-bottom: 2px solid lightgrey;
+		}
+		.edit[placeholder] {
+		    color: black; 
+		 }
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="text-center">jQuery CRUD</h1>
+
+		<button type="button" class="btn btn-primary mb-4 ml-4" data-toggle="modal" data-target="#myModal">
+			Add User
+		</button>
+		<!-- The Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header text-center">
+						<h4 class="modal-title w-100 font-weight-bold">Add User Form</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+
+					<!-- Modal body -->
+					<div class="modal-body mx-3">
+						<form class="form-group m-0" id="myForm">
+							<input type="hidden" id="id" name="id">
+							<div class="md-form mb-3"">
+						        <input type=" text" class="form-control col-md-12 validate edit" id="userId"
+							 name="userId" placeholder="User Id ">
+							</div>
+							<div class="md-form mb-3">
+								<input type="text" class="form-control col-md-12 validate edit" id="title" name="title" placeholder="Title">
+							</div>
+							<div class="md-form mb-3">
+								<input type="text" class="form-control col-md-12 validate edit" id="body" name="body" placeholder="Body">
+							</div>
+							<button type="submit" id="submit" class="btn btn-secondary" data-dismiss="modal">Submit</button>
+						</form>
+					</div>
+
+					<!-- Modal footer -->
+					<div class="modal-footer"></div>
+				</div>
+			</div>
+		</div>
+
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr class="bg-warning">
+					<th>Id</th>
+					<th>UserId</th>
+					<th>Title</th>
+					<th>Body</th>
+					<th>Manage</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- data coming from jQuery-crud.js file -->
+			</tbody>
+		</table>
+	</div>
+
+	<script src="jQuery-crud.js"></script>
+</body>
+
+</html>
